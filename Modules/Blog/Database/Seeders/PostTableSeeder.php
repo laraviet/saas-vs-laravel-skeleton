@@ -3,10 +3,11 @@
 namespace Modules\Blog\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Eloquent\Model;
+use Modules\Blog\Entities\Post;
 
 class PostTableSeeder extends Seeder
 {
+    use \DisableForeignKeys, \TruncateTable;
     /**
      * Run the database seeds.
      *
@@ -14,8 +15,11 @@ class PostTableSeeder extends Seeder
      */
     public function run()
     {
-        Model::unguard();
+        $this->disableForeignKeys();
+        $this->truncate('posts');
 
-        // $this->call("OthersTableSeeder");
+        factory(Post::class, 10)->create();
+
+        $this->enableForeignKeys();
     }
 }
