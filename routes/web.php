@@ -25,6 +25,3 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('roles', 'RoleController');
     Route::resource('users', 'UserController');
 });
-
-// Auto deploy route - cannot remove
-Route::post('/deploy', 'DeployController@index');
