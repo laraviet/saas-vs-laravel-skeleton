@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5ed2c49d229c8c36ba0955a7c883b39",
+    "content-hash": "45b560eebc8a536cb28dc310b5961ef9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1113,6 +1113,61 @@
             "time": "2020-04-07T15:01:31+00:00"
         },
         {
+            "name": "laravel/ui",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "da9350533d0da60d5dc42fb7de9c561c72129bba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/da9350533d0da60d5dc42fb7de9c561c72129bba",
+                "reference": "da9350533d0da60d5dc42fb7de9c561c72129bba",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^7.0",
+                "illuminate/filesystem": "^7.0",
+                "illuminate/support": "^7.0",
+                "php": "^7.2.5"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "time": "2020-06-30T20:56:33+00:00"
+        },
+        {
             "name": "laravelcollective/html",
             "version": "v6.1.2",
             "source": {
@@ -1181,17 +1236,17 @@
             "time": "2020-05-19T18:02:16+00:00"
         },
         {
-            "name": "laraviet/adminhome-module",
+            "name": "laraviet/admin-home-module",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laraviet/adminhome-module.git",
-                "reference": "3718ae7f3e930ed53ef3e05de5d5e98cb6769992"
+                "url": "https://github.com/laraviet/admin-home-module.git",
+                "reference": "3632aa757742747aa4ebbf82adf2930659ef02e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laraviet/adminhome-module/zipball/3718ae7f3e930ed53ef3e05de5d5e98cb6769992",
-                "reference": "3718ae7f3e930ed53ef3e05de5d5e98cb6769992",
+                "url": "https://api.github.com/repos/laraviet/admin-home-module/zipball/3632aa757742747aa4ebbf82adf2930659ef02e3",
+                "reference": "3632aa757742747aa4ebbf82adf2930659ef02e3",
                 "shasum": ""
             },
             "require": {
@@ -1221,7 +1276,7 @@
                     "email": "thanhcttsp@gmail.com"
                 }
             ],
-            "time": "2020-07-05T02:25:43+00:00"
+            "time": "2020-07-05T04:17:15+00:00"
         },
         {
             "name": "laraviet/core-module",
@@ -1229,22 +1284,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laraviet/core-module.git",
-                "reference": "71ebb7831ca16ac8e60e877fbbd389fbdcbc1761"
+                "reference": "a84145d677e2d663fdc369df3130b06a8461aafb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laraviet/core-module/zipball/71ebb7831ca16ac8e60e877fbbd389fbdcbc1761",
-                "reference": "71ebb7831ca16ac8e60e877fbbd389fbdcbc1761",
+                "url": "https://api.github.com/repos/laraviet/core-module/zipball/a84145d677e2d663fdc369df3130b06a8461aafb",
+                "reference": "a84145d677e2d663fdc369df3130b06a8461aafb",
                 "shasum": ""
             },
             "require": {
                 "laravel/helpers": "^1.2",
+                "laravel/ui": "^2.1",
                 "laravelcollective/html": "^6.1",
-                "nwidart/laravel-modules": "^7.1",
                 "spatie/laravel-permission": "^3.13"
-            },
-            "require-dev": {
-                "laravel/ui": "^2.1"
             },
             "type": "laravel-module",
             "extra": {
@@ -1270,7 +1322,7 @@
                     "email": "thanhcttsp@gmail.com"
                 }
             ],
-            "time": "2020-07-05T01:57:37+00:00"
+            "time": "2020-07-05T02:25:09+00:00"
         },
         {
             "name": "league/commonmark",
@@ -5161,61 +5213,6 @@
             "time": "2016-01-20T08:20:44+00:00"
         },
         {
-            "name": "laravel/ui",
-            "version": "v2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/ui.git",
-                "reference": "da9350533d0da60d5dc42fb7de9c561c72129bba"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/ui/zipball/da9350533d0da60d5dc42fb7de9c561c72129bba",
-                "reference": "da9350533d0da60d5dc42fb7de9c561c72129bba",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/console": "^7.0",
-                "illuminate/filesystem": "^7.0",
-                "illuminate/support": "^7.0",
-                "php": "^7.2.5"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.0",
-                "phpunit/phpunit": "^8.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Laravel\\Ui\\UiServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Laravel\\Ui\\": "src/",
-                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "Laravel UI utilities and presets.",
-            "keywords": [
-                "laravel",
-                "ui"
-            ],
-            "time": "2020-06-30T20:56:33+00:00"
-        },
-        {
             "name": "mockery/mockery",
             "version": "1.4.0",
             "source": {
@@ -6861,7 +6858,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "laraviet/adminhome-module": 20,
+        "laraviet/admin-home-module": 20,
         "laraviet/core-module": 20
     },
     "prefer-stable": true,
