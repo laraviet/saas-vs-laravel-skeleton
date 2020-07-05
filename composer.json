@@ -17,8 +17,8 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "nwidart/laravel-modules": "^7.1",
-        "laraviet/core-module": "dev-master",
-        "laraviet/admin-home-module": "dev-master"
+        "laraviet/admin-home-module": "dev-master",
+        "laraviet/core-module": "dev-master"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
