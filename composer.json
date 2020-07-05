@@ -67,7 +67,7 @@
             "@php artisan key:generate --ansi",
             "@php artisan module:enable Core",
             "@php artisan module:enable AdminHome",
-            "@php artisan theme:install"
+            "mkdir themes"
         ]
     }
 }
