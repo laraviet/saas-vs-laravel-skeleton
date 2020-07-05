@@ -60,7 +60,8 @@
             "@composer require laraviet/core-module",
             "@composer require laraviet/adminhome-module",
             "@php artisan module:enable Core",
-            "@php artisan module:enable AdminHome"
+            "@php artisan module:enable AdminHome",
+            "@php artisan theme:install"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
