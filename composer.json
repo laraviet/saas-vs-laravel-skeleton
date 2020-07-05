@@ -16,7 +16,9 @@
         "joshbrw/laravel-module-installer": "^0.1.4",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
-        "nwidart/laravel-modules": "^7.1"
+        "nwidart/laravel-modules": "^7.1",
+        "laraviet/core-module": "dev-master",
+        "laraviet/adminhome-module": "dev-master"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
@@ -63,8 +65,6 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
-            "@composer require laraviet/core-module",
-            "@composer require laraviet/adminhome-module",
             "@php artisan module:enable Core",
             "@php artisan module:enable AdminHome",
             "@php artisan theme:install"
