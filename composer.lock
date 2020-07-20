@@ -1363,12 +1363,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laraviet/core-module.git",
-                "reference": "30b8b411c80e9d6d9b79a27ccdcf17f72b3b688a"
+                "reference": "326d4893afe4b18285187b5dad4cfe7fc2df5050"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laraviet/core-module/zipball/30b8b411c80e9d6d9b79a27ccdcf17f72b3b688a",
-                "reference": "30b8b411c80e9d6d9b79a27ccdcf17f72b3b688a",
+                "url": "https://api.github.com/repos/laraviet/core-module/zipball/326d4893afe4b18285187b5dad4cfe7fc2df5050",
+                "reference": "326d4893afe4b18285187b5dad4cfe7fc2df5050",
                 "shasum": ""
             },
             "require": {
