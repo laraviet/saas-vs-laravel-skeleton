@@ -16,7 +16,7 @@
         "igaster/laravel-theme": "^2.0",
         "joshbrw/laravel-module-installer": "^0.1.4",
         "laravel/framework": "^7.0",
-        "laravel/tinker": "^2.0",translatable.php
+        "laravel/tinker": "^2.0",
         "laraviet/admin-home-module": "dev-master",
         "laraviet/core-module": "dev-master",
         "nwidart/laravel-modules": "^7.1"
