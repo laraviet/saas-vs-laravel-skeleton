@@ -3,8 +3,9 @@
 2. inside new <project> folder, run: php artisan theme:install
 3. config database vs update .env
 4. update `CACHE_DRIVER=redis` in .env (make sure install redis in vps)
-4. php artisan migrate —seed
-5. php artisan module:seed
+5. update `email info` in `.env` (for reset password) 
+6. php artisan migrate —seed
+7. php artisan module:seed
 
 ## II. Auto Deploy in Github
 1. Edit file `public/deploy.php` => update `cd` command to right folder in VPS
