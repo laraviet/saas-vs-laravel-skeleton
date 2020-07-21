@@ -1320,12 +1320,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laraviet/admin-home-module.git",
-                "reference": "3632aa757742747aa4ebbf82adf2930659ef02e3"
+                "reference": "238b6d0cd274f9983e2c36971c84e340f848f7a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laraviet/admin-home-module/zipball/3632aa757742747aa4ebbf82adf2930659ef02e3",
-                "reference": "3632aa757742747aa4ebbf82adf2930659ef02e3",
+                "url": "https://api.github.com/repos/laraviet/admin-home-module/zipball/238b6d0cd274f9983e2c36971c84e340f848f7a5",
+                "reference": "238b6d0cd274f9983e2c36971c84e340f848f7a5",
                 "shasum": ""
             },
             "require": {
@@ -1355,7 +1355,7 @@
                     "email": "thanhcttsp@gmail.com"
                 }
             ],
-            "time": "2020-07-05T04:17:15+00:00"
+            "time": "2020-07-20T03:14:36+00:00"
         },
         {
             "name": "laraviet/core-module",
@@ -1363,12 +1363,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laraviet/core-module.git",
-                "reference": "97a12f9cfe1f43081e3c417d94606364c0a7fb35"
+                "reference": "83eb5e7829a55e1125a9fc8b51e3782fe8631010"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laraviet/core-module/zipball/97a12f9cfe1f43081e3c417d94606364c0a7fb35",
-                "reference": "97a12f9cfe1f43081e3c417d94606364c0a7fb35",
+                "url": "https://api.github.com/repos/laraviet/core-module/zipball/83eb5e7829a55e1125a9fc8b51e3782fe8631010",
+                "reference": "83eb5e7829a55e1125a9fc8b51e3782fe8631010",
                 "shasum": ""
             },
             "require": {
@@ -1389,7 +1389,10 @@
             "autoload": {
                 "psr-4": {
                     "Modules\\Core\\": ""
-                }
+                },
+                "files": [
+                    "Helpers/functions.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1401,7 +1404,7 @@
                     "email": "thanhcttsp@gmail.com"
                 }
             ],
-            "time": "2020-07-05T02:25:09+00:00"
+            "time": "2020-07-21T06:41:28+00:00"
         },
         {
             "name": "league/commonmark",
