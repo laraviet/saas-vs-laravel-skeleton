@@ -1,0 +1,11 @@
+1. All `model` should be in `Entities` folder in Module
+2. All `mutator, accessor` of model should be created in Trait inside `Entities\Traits\Attribute` folder
+    - Example `Post` model should have `Entities\Traits\Attribute\PostAttribute` trait
+3. All `Relationship` of model should be created in Trait insite `Entities\Traits\Relationship` folder
+    - Example `Post` model should have `Entities\Traits\Relationship\PostRelationship` trait
+4. Query to filter records should be created in Trait inside `Entities\Traits\Filterable` folder
+    - Example `TitleFilerable`
+5. To use this filter, we need to create in Trait inside `Entities\Traits\Scope` and use this scope in model
+    - Example `Post` model should have `Entities\Traits\Scope\PostScope` trait
+
+(Example code placed inside `Blog` Module)
