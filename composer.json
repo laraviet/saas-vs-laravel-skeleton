@@ -12,6 +12,7 @@
         "astrotomic/laravel-translatable": "^11.8",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
+        "genealabs/laravel-model-caching": "^0.9.0",
         "guzzlehttp/guzzle": "^6.3",
         "igaster/laravel-theme": "^2.0",
         "joshbrw/laravel-module-installer": "^0.1.4",
