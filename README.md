@@ -12,6 +12,7 @@
 11. `git clone https://github.com/laraviet/core-module.git Modules/Core`
 12. `git clone https://github.com/laraviet/admin-home-module.git Modules/AdminHome`
 13. `php artisan storage:link`
+14. update `APP_URL` in `.env` to match real domain
 
 ## II. Installation for client's real project
 1. composer create-project laraviet/vs-laravel-skeleton -s dev project-name
@@ -21,6 +22,7 @@
 5. `php artisan migrate —seed`
 6. `php artisan module:seed`
 7. `php artisan storage:link`
+8. update `APP_URL` in `.env` to match real domain
 
 ## III. Auto Deploy in Github
 1. Edit file `public/deploy.php` => update `cd` command to right folder in VPS
