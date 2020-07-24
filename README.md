@@ -15,13 +15,12 @@
 
 ## II. Installation for client's real project
 1. composer create-project laraviet/vs-laravel-skeleton -s dev project-name
-2. inside new <project> folder, run: `php artisan theme:install`
-3. config database vs update .env
-4. update `CACHE_DRIVER=redis` in .env (make sure install redis in vps)
-5. update `email info` in `.env` (for reset password) 
-6. `php artisan migrate —seed`
-7. `php artisan module:seed`
-8. `php artisan storage:link`
+2. config database vs update .env
+3. update `CACHE_DRIVER=redis` in .env (make sure install redis in vps)
+4. update `email info` in `.env` (for reset password) 
+5. `php artisan migrate —seed`
+6. `php artisan module:seed`
+7. `php artisan storage:link`
 
 ## III. Auto Deploy in Github
 1. Edit file `public/deploy.php` => update `cd` command to right folder in VPS

@@ -69,8 +69,7 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
             "@php artisan module:enable Core",
-            "@php artisan module:enable AdminHome",
-            "mkdir themes"
+            "@php artisan module:enable AdminHome"
         ]
     }
 }
