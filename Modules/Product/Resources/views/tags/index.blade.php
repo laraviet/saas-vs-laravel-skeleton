@@ -1,6 +1,6 @@
 @extends('layouts.admin.master')
 
-@section('title') {{ _t('brand') }} @endsection
+@section('title') {{ _t('tag') }} @endsection
 
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{ theme_url('assets/libs/toastr/toastr.min.css')}}">
@@ -9,9 +9,9 @@
 @section('content')
 
     @component('common-components.breadcrumb')
-        @slot('title') {{ _t('brand') }} @endslot
+        @slot('title') {{ _t('tag') }} @endslot
         @slot('li_1') {{ _t('home') }} @endslot
-        @slot('li_2') {{ _t('brand') }} @endslot
+        @slot('li_2') {{ _t('tag') }} @endslot
     @endcomponent
 
     <div class="row">
@@ -29,18 +29,18 @@
                                            @if ($search = request()->get('filter')['search'])
                                            value="{{ $search  }}"
                                            @endif
-                                           onkeypress="return search(event, '{{ route('brands.index') }}')"
+                                           onkeypress="return search(event, '{{ route('tags.index') }}')"
                                     />
                                     <i class="bx bx-search-alt search-icon"
-                                       onclick="return redirectWithSearch('{{ route('brands.index') }}')"></i>
+                                       onclick="return redirectWithSearch('{{ route('tags.index') }}')"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-8">
                             <div class="text-sm-right">
-                                <a type="button" style="color: white;" href="{{ route('brands.create') }}"
+                                <a type="button" style="color: white;" href="{{ route('tags.create') }}"
                                    class="btn btn-success btn-rounded waves-effect waves-light mb-2 mr-2"><i
-                                        class="mdi mdi-plus mr-1"></i> {{ _t('add_new') . ' ' . _t('brand') }}
+                                        class="mdi mdi-plus mr-1"></i> {{ _t('add_new') . ' ' . _t('tag') }}
                                 </a>
                             </div>
                         </div><!-- end col-->
@@ -51,25 +51,19 @@
                             <thead class="thead-light">
                             <tr>
                                 <th>{{ _t('name') }}</th>
-                                <th>{{ _t('thumbnail') }}</th>
-                                <th>{{ _t('featured') }}</th>
                                 <th>{{ _t('status') }}</th>
                                 <th class="text-center">{{ _t('action') }}</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($brands as $brand)
+                            @foreach($tags as $tag)
                                 <tr>
-                                    <td>{{ $brand->name }}</td>
-                                    <td><img src="{{ $brand->thumbnail }}" alt=""></td>
+                                    <td>{{ $tag->name }}</td>
                                     <td>
-                                        {!! yesNoHtml($brand->is_feature) !!}
-                                    </td>
-                                    <td>
-                                        {!! activeInactiveHtml($brand->statusName) !!}
+                                        {!! activeInactiveHtml($tag->statusName) !!}
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{ route('brands.edit', [$brand->id]) }}"
+                                        <a href="{{ route('tags.edit', [$tag->id]) }}"
                                            class="mr-3 text-primary" data-toggle="tooltip"
                                            data-placement="top" title=""
                                            data-original-title="{{ _t('edit') }}">
@@ -77,7 +71,7 @@
                                         </a>
                                         {!! Form::open([
                                                 'method' => 'DELETE',
-                                                'route' => ['brands.destroy', $brand->id],
+                                                'route' => ['tags.destroy', $tag->id],
                                                 'style'=>'display:inline',
                                                 'onsubmit' => 'return confirm("' . _t('delete_confirm') . '");'
                                         ]) !!}
@@ -98,7 +92,7 @@
                     </div>
 
                     <div class="pagination pagination-rounded justify-content-end mb-2">
-                        {{ $brands->withQueryString()->links() }}
+                        {{ $tags->withQueryString()->links() }}
                     </div>
                 </div>
             </div>

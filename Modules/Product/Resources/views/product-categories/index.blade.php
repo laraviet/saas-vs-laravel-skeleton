@@ -65,12 +65,10 @@
                                     <td>{{ isset($productCategory->parent) ? $productCategory->parent->name : '' }}</td>
                                     <td><img src="{{ $productCategory->thumbnail }}" alt=""></td>
                                     <td>
-                                        @if($productCategory->is_feature)
-                                            <i class="mdi mdi-check-bold font-size-18 text-success"></i>
-                                        @endif
+                                        {!! yesNoHtml($productCategory->is_feature) !!}
                                     </td>
                                     <td>
-                                        <label class="badge badge-success">{{ $productCategory->statusName }}</label>
+                                        {!! activeInactiveHtml($productCategory->statusName) !!}
                                     </td>
                                     <td class="text-center">
                                         <a href="{{ route('product-categories.edit', [$productCategory->id]) }}"
