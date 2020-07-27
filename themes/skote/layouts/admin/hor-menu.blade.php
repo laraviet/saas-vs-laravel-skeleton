@@ -13,6 +13,21 @@
                         </li>
                     @endif
 
+                    @if(Module::find('product') && Module::find('product')->isEnabled())
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard"
+                               role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bx bx-dollar mr-2"></i>{{ _t('ecommerce') }}
+                                <div class="arrow-down"></div>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
+                                <a href="{{ route('product-categories.index') }}"
+                                   class="dropdown-item">{{ _t('product_category') }}</a>
+                            </div>
+                        </li>
+                    @endif
+
                     @if(Module::find('core') && Module::find('core')->isEnabled())
                         @if(config('core.role_management'))
                             <li class="nav-item dropdown">
