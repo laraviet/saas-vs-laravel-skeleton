@@ -9,5 +9,5 @@ class ProductTranslation extends Model
 {
     use Cachable;
 
-    protected $fillable = [];
+    protected $fillable = ['name', 'caption', 'description'];
 }
