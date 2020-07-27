@@ -24,6 +24,8 @@
                             <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
                                 <a href="{{ route('product-categories.index') }}"
                                    class="dropdown-item">{{ _t('product_category') }}</a>
+                                <a href="{{ route('brands.index') }}"
+                                   class="dropdown-item">{{ _t('brand') }}</a>
                             </div>
                         </li>
                     @endif

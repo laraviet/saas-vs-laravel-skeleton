@@ -9,12 +9,13 @@ use Modules\Core\Entities\Traits\HasImageModel;
 use Modules\Product\Entities\Traits\Attribute\ProductCategoryAttribute;
 use Modules\Product\Entities\Traits\Methods\ProductCategoryMethod;
 use Modules\Product\Entities\Traits\Relationship\ProductCategoryRelationship;
+use Modules\Product\Entities\Traits\Scope\ProductCategoryScope;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 
 class ProductCategory extends Model implements HasMedia
 {
     use Translatable, Cachable, HasImageModel;
-    use ProductCategoryAttribute, ProductCategoryMethod, ProductCategoryRelationship;
+    use ProductCategoryAttribute, ProductCategoryMethod, ProductCategoryRelationship, ProductCategoryScope;
 
     const THUMBNAIL = 'thumbnail';
 

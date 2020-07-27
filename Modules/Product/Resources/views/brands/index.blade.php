@@ -1,6 +1,6 @@
 @extends('layouts.admin.master')
 
-@section('title') {{ _t('product_category') }} @endsection
+@section('title') {{ _t('brand') }} @endsection
 
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{ theme_url('assets/libs/toastr/toastr.min.css')}}">
@@ -9,9 +9,9 @@
 @section('content')
 
     @component('common-components.breadcrumb')
-        @slot('title') {{ _t('product_category') }} @endslot
+        @slot('title') {{ _t('brand') }} @endslot
         @slot('li_1') {{ _t('home') }} @endslot
-        @slot('li_2') {{ _t('product_category') }} @endslot
+        @slot('li_2') {{ _t('brand') }} @endslot
     @endcomponent
 
     <div class="row">
@@ -29,18 +29,18 @@
                                            @if ($search = request()->get('filter')['search'])
                                            value="{{ $search  }}"
                                            @endif
-                                           onkeypress="return search(event, '{{ route('product-categories.index') }}')"
+                                           onkeypress="return search(event, '{{ route('brands.index') }}')"
                                     />
                                     <i class="bx bx-search-alt search-icon"
-                                       onclick="return redirectWithSearch('{{ route('product-categories.index') }}')"></i>
+                                       onclick="return redirectWithSearch('{{ route('brands.index') }}')"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-8">
                             <div class="text-sm-right">
-                                <a type="button" style="color: white;" href="{{ route('product-categories.create') }}"
+                                <a type="button" style="color: white;" href="{{ route('brands.create') }}"
                                    class="btn btn-success btn-rounded waves-effect waves-light mb-2 mr-2"><i
-                                        class="mdi mdi-plus mr-1"></i> {{ _t('add_new') . ' ' . _t('product_category') }}
+                                        class="mdi mdi-plus mr-1"></i> {{ _t('add_new') . ' ' . _t('brand') }}
                                 </a>
                             </div>
                         </div><!-- end col-->
@@ -51,29 +51,27 @@
                             <thead class="thead-light">
                             <tr>
                                 <th>{{ _t('name') }}</th>
-                                <th>{{ _t('parent') }}</th>
                                 <th>{{ _t('thumbnail') }}</th>
-                                <th>{{ _t('featured') }}</th>
                                 <th>{{ _t('status') }}</th>
+                                <th>{{ _t('featured') }}</th>
                                 <th class="text-center">{{ _t('action') }}</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($productCategories as $productCategory)
+                            @foreach($brands as $brand)
                                 <tr>
-                                    <td>{{ $productCategory->name }}</td>
-                                    <td>{{ isset($productCategory->parent) ? $productCategory->parent->name : '' }}</td>
-                                    <td><img src="{{ $productCategory->thumbnail }}" alt=""></td>
+                                    <td>{{ $brand->name }}</td>
+                                    <td><img src="{{ $brand->thumbnail }}" alt=""></td>
                                     <td>
-                                        @if($productCategory->is_feature)
+                                        <label class="badge badge-success">{{ $brand->statusName }}</label>
+                                    </td>
+                                    <td>
+                                        @if($brand->is_feature)
                                             <i class="mdi mdi-check-bold font-size-18 text-success"></i>
                                         @endif
                                     </td>
-                                    <td>
-                                        <label class="badge badge-success">{{ $productCategory->statusName }}</label>
-                                    </td>
                                     <td class="text-center">
-                                        <a href="{{ route('product-categories.edit', [$productCategory->id]) }}"
+                                        <a href="{{ route('brands.edit', [$brand->id]) }}"
                                            class="mr-3 text-primary" data-toggle="tooltip"
                                            data-placement="top" title=""
                                            data-original-title="{{ _t('edit') }}">
@@ -81,7 +79,7 @@
                                         </a>
                                         {!! Form::open([
                                                 'method' => 'DELETE',
-                                                'route' => ['product-categories.destroy', $productCategory->id],
+                                                'route' => ['brands.destroy', $brand->id],
                                                 'style'=>'display:inline',
                                                 'onsubmit' => 'return confirm("' . _t('delete_confirm') . '");'
                                         ]) !!}
@@ -102,7 +100,7 @@
                     </div>
 
                     <div class="pagination pagination-rounded justify-content-end mb-2">
-                        {{ $productCategories->withQueryString()->links() }}
+                        {{ $brands->withQueryString()->links() }}
                     </div>
                 </div>
             </div>

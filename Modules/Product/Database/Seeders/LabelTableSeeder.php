@@ -24,6 +24,7 @@ class LabelTableSeeder extends Seeder
         $labels = [
             ["key" => "product_category", "vi" => ["value" => "Danh mục sản phẩm"], "en" => ["value" => "Product Category"]],
             ["key" => "featured", "vi" => ["value" => "Featured"], "en" => ["value" => "Featured"]],
+            ["key" => "brand", "vi" => ["value" => "Hãng"], "en" => ["value" => "Brand"]],
         ];
 
         foreach ($labels as $label) {

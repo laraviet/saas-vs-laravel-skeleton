@@ -2,7 +2,7 @@
 
 namespace Modules\Product\Entities\Traits\Methods;
 
-trait ProductCategoryMethod
+trait BrandMethod
 {
     public static function statuses()
     {

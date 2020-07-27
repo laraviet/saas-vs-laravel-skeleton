@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::resource('product-categories', 'ProductCategoryController');
+    Route::resource('brands', 'BrandController');
 });
